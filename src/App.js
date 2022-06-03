@@ -2,6 +2,8 @@
 import './App.css';
 
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
+
 function App() {
   const expenses = [
     {
@@ -25,9 +27,14 @@ function App() {
       date: new Date(2022 , 5 ,11)
     }
   ]
+
+  const addExpenseDataInArray = (singleExpenseData) =>{
+      console.log(singleExpenseData)
+  }
  
   return (
     <div className="App">
+      <NewExpense addExpenseDataInArray={addExpenseDataInArray}/>
       <Expenses items={expenses}></Expenses>
     </div>
   );
